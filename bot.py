@@ -10,5 +10,6 @@ updater = Updater(TOKEN)
 
 updater.dispatcher.add_handler(CommandHandler('hello', hello))
 
+print('Starting bot...')
 updater.start_polling()
 updater.idle()
