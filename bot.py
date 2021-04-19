@@ -1,9 +1,8 @@
-from telegram import Update
-from telegram.ext import Updater, CommandHandler, CallbackContext
+from telegram.ext import Updater, CommandHandler
 from envs import TOKEN
 
 
-def hello(update: Update, context: CallbackContext) -> None:
+def hello(update, context):
     update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
 
