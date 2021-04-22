@@ -2,6 +2,6 @@
 - Create db&tables from db.sql
 - Fill table bridge with basic data
 - Fill table day with future days(for a month)
-- Function list_bridges()
+- Function list_bridges() - > list of dicts
 - Function add_opening(open, close, day_id, bridge_id)
-- Function fetch_today_info(day_id) 
+- Function fetch_today_info(date) -> list of dicts(bridge) with variable = list of dicts(opening)
