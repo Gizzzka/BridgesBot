@@ -24,13 +24,15 @@ def init_days():
     with sq.connect(DB_PATH) as con:
         cur = con.cursor()
 
-        cur_dt = date.today()
+        date_rage_start = date.today()
+        date_range_end = date_range_start + timedelta(month=1)
+        date_range_step = timedelta(days=1)
 
-        while cur_dt <= cur_dt + timedelta(months=1):
+        while day <= day + timedelta(days=30):
 
             cur.execute("""INSERT INTO day (ts) VALUES (?)""", day)
 
-            cur_dt = timedelta(days=1)
+            day = timedelta(days=1)
 
 
 def get_list_of_the_bridges():
