@@ -29,6 +29,7 @@ def init_days():
         
         date_rage_start = date.today()
         date_range_end = date_range_start + timedelta(month=1)
+        date_range_step = timedelta(days=1)
 
         for day in date_range:
 
