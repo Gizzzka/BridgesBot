@@ -26,8 +26,9 @@ def init_bridges(data):
 def init_days():
     with sq.connect(DB_PATH) as con:
         cur = con.cursor()
-
-        date_range = date.today() + timedelta(month=1)
+        
+        date_rage_start = date.today()
+        date_range_end = date_range_start + timedelta(month=1)
 
         for day in date_range:
 
