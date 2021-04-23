@@ -4,6 +4,7 @@ import json
 from typing import List, Any
 from selenium import webdriver
 
+
 URL = 'https://mostotrest-spb.ru/'
 
 
