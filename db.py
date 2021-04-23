@@ -2,9 +2,6 @@ import sqlite3 as sq
 from datetime import date, timedelta, datetime
 
 
-
-
-
 def init_db():
     with sq.connect(DB_PATH) as con:
         cur = con.cursor()
@@ -27,11 +24,13 @@ def init_days():
     with sq.connect(DB_PATH) as con:
         cur = con.cursor()
 
-        date_range = date.today() + timedelta(month=1)
+        cur_dt = date.today()
 
-        for day in date_range:
+        while cur_dt <= cur_dt + timedelta(months=1):
 
             cur.execute("""INSERT INTO day (ts) VALUES (?)""", day)
+
+            cur_dt = timedelta(days=1)
 
 
 def get_list_of_the_bridges():
