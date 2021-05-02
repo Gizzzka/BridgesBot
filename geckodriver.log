@@ -1,0 +1,221 @@
+1619974174293	geckodriver	INFO	Listening on 127.0.0.1:54886
+1619974175303	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileXXUNUL"
+1619974176149	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619974178030	Marionette	INFO	Listening on port 54899
+1619974178100	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619974181279	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619974206718	Marionette	INFO	Stopped listening on port 54899
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619974327695	geckodriver	INFO	Listening on 127.0.0.1:55025
+1619974327706	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileasWy5I"
+1619974328264	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619974329992	Marionette	INFO	Listening on port 55034
+1619974330078	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619974335768	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619974353343	Marionette	INFO	Stopped listening on port 55034
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619974424165	geckodriver	INFO	Listening on 127.0.0.1:55166
+1619974424179	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileyHUJxb"
+1619974424751	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619974426416	Marionette	INFO	Listening on port 55175
+1619974426441	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619974429908	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619974450220	Marionette	INFO	Stopped listening on port 55175
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619974513294	geckodriver	INFO	Listening on 127.0.0.1:55296
+1619974513305	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofilefuy9oT"
+1619974513863	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619974515662	Marionette	INFO	Listening on port 55301
+1619974515708	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619974519962	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619974539226	Marionette	INFO	Stopped listening on port 55301
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619975185163	geckodriver	INFO	Listening on 127.0.0.1:55453
+1619975185174	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileThdotu"
+1619975185654	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619975187290	Marionette	INFO	Listening on port 55458
+1619975187370	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619975191743	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619975208073	Marionette	INFO	Stopped listening on port 55458
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619975531283	geckodriver	INFO	Listening on 127.0.0.1:55638
+1619975531295	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileiSr1jZ"
+1619975531893	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619975533787	Marionette	INFO	Listening on port 55643
+1619975533901	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+console.error: services.settings: 
+  main/fxmonitor-breaches Signature failed  TypeError: NetworkError when attempting to fetch resource.
+1619975534354	Marionette	INFO	Stopped listening on port 55643
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619975572540	geckodriver	INFO	Listening on 127.0.0.1:55689
+1619975572553	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileLXyqG4"
+1619975573104	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619975584929	geckodriver	INFO	Listening on 127.0.0.1:55732
+1619975584946	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileZw3yzo"
+1619975585506	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619975587336	Marionette	INFO	Listening on port 55737
+1619975587444	Marionette	WARN	TLS certificate errors will be ignored for this session
+Marionette threw an error: TypeError: this.curBrowser.contentBrowser is null
+GeckoDriver.prototype.navigateTo@chrome://marionette/content/driver.js:947:3
+
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1619975588504	Marionette	INFO	Stopped listening on port 55737
+1619975857884	geckodriver	INFO	Listening on 127.0.0.1:55817
+1619975857897	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileirQS5q"
+1619975858560	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619975860552	Marionette	INFO	Listening on port 55822
+1619975860673	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619975863505	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619975883736	Marionette	INFO	Stopped listening on port 55822
+1619975946128	geckodriver	INFO	Listening on 127.0.0.1:55958
+1619975946140	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileoT9xk3"
+1619975946697	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619975948470	Marionette	INFO	Listening on port 55963
+1619975948527	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619975951615	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619975972005	Marionette	INFO	Stopped listening on port 55963
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619976047130	geckodriver	INFO	Listening on 127.0.0.1:56100
+1619976047141	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofilefpKhVM"
+1619976047698	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619976049489	Marionette	INFO	Listening on port 56105
+1619976049525	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619976052531	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619976071739	Marionette	INFO	Stopped listening on port 56105
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619976148130	geckodriver	INFO	Listening on 127.0.0.1:56245
+1619976148141	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofilekaJDXf"
+1619976148685	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619976150517	Marionette	INFO	Listening on port 56250
+1619976150631	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619976154272	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619976177083	Marionette	INFO	Stopped listening on port 56250
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619976348896	geckodriver	INFO	Listening on 127.0.0.1:56422
+1619976348910	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileVq78vt"
+1619976349397	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619976350938	Marionette	INFO	Listening on port 56427
+1619976351018	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619976352099	Marionette	INFO	Stopped listening on port 56427
+1619976463652	geckodriver	INFO	Listening on 127.0.0.1:56483
+1619976463664	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofile9ISTby"
+1619976464136	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619976465688	Marionette	INFO	Listening on port 56488
+1619976465740	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619976468788	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619976488065	Marionette	INFO	Stopped listening on port 56488
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619976577611	geckodriver	INFO	Listening on 127.0.0.1:56618
+1619976577623	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileEV8vVb"
+1619976578160	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619976579881	Marionette	INFO	Listening on port 56623
+1619976579982	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619976583142	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619976603428	Marionette	INFO	Stopped listening on port 56623
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

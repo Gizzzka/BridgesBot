@@ -3,9 +3,12 @@ import random
 import json
 from typing import List, Any
 from selenium import webdriver
+from pprint import pprint
 
 
 URL = 'https://mostotrest-spb.ru/'
+# GECKO_PATH = '/Users/abarnett/Documents/geckodriver'
+GECKO_PATH = 'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe'
 
 
 def fix_title(title):
@@ -33,28 +36,33 @@ def fix_title(title):
     return fixed_title
 
 
+def fix_time(raw):
+    return time.strptime(raw, '%H:%M')
+
+
 def fix_schedule(wrong_schedule):
+    result = {}
+
     # fixing schedules with small time intervals
     if len(wrong_schedule) > 2:
         # adding bridge opening time
-        fixed_schedule = 'Разведен с ' + str(wrong_schedule[-2]) + ' по ' + str(wrong_schedule[0]) + '; '
+        result[fix_time(wrong_schedule[-2])] = fix_time(wrong_schedule[0])
 
         # adding small time intervals
-        for elem in range(0, len(wrong_schedule[:-2]), 2):
-            fixed_schedule += 'Сведен с ' + str(wrong_schedule[elem]) + ' по ' + str(wrong_schedule[elem + 1]) + '; '
+        if len(wrong_schedule) > 4:
+            result[fix_time(wrong_schedule[2])] = fix_time(wrong_schedule[3])
 
         # adding bridge closing time
-        fixed_schedule += 'Разведен с ' + str(wrong_schedule[-3]) + ' по ' + str(wrong_schedule[-1])
+        result[fix_time(wrong_schedule[-3])] = fix_time(wrong_schedule[-1])
 
-    # fixing schedules without small time intervals
     elif len(wrong_schedule) == 2:
-        fixed_schedule = 'Разведен с ' + str(wrong_schedule[0]) + ' по ' + str(wrong_schedule[1])
+        result[fix_time(wrong_schedule[0])] = fix_time(wrong_schedule[1])
 
     # if argument is too short
     else:
-        fixed_schedule = ''
+        result = {}
 
-    return fixed_schedule
+    return result
 
 
 def configure_the_browser():
@@ -97,15 +105,16 @@ def configure_the_browser():
     options.headless = True
 
     # creating a webdriver object
-    driver = webdriver.Firefox(executable_path=r'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe',
+    driver = webdriver.Firefox(executable_path=GECKO_PATH,
                                options=options, proxy=random_proxy)
     return driver
 
 
 def get_schedule(url):
     # configuring the browser
+
     # driver = configure_the_browser()
-    driver = webdriver.Firefox(executable_path=r'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe')
+    driver = webdriver.Firefox(executable_path=GECKO_PATH)
 
     # creating the final dict
     bridge_dict = {}
@@ -150,13 +159,5 @@ def get_schedule(url):
     return bridge_dict
 
 
-def write_data_to_a_file(url=URL):
-    # getting bridges schedule
-    data = get_schedule(url)
-
-    # writing schedule to a file
-    with open('Bridges_schedule.json', 'w') as file:
-        json.dump(data, file, indent=4, ensure_ascii=False)
-
-
-# write_data_to_a_file(URL)
+data = get_schedule(URL)
+pprint(data)

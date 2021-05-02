@@ -5,4 +5,3 @@
 - Function list_bridges() - > list of dicts
 - Function add_opening(open, close, day_id, bridge_id)
 - Function fetch_today_info(date) -> list of dicts(bridge) with variable = list of dicts(opening)
- 
