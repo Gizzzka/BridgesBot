@@ -1,6 +1,7 @@
 import sqlite3 as sq
 from datetime import date, time
 from dateutil import parser
+from pprint import pprint
 
 
 def convert_time(str_time):
@@ -99,7 +100,7 @@ def get_data():
         cur = con.cursor()
 
         cur.execute("""SELECT date.date, bridges_titles.full_title, opened_at, closed_at from opening_time
-                       JOIN bridges_titles 
+                       JOIN bridges_titles
                        ON bridges_titles.id == bridge_id
                        JOIN date
                        ON date.id = date_id
@@ -115,7 +116,7 @@ def get_data():
                 data_dict[elem[1]][0][convert_time(elem[2])] = convert_time(elem[3])
 
         print('***Data were successfully retrieved***')
-        print(data_dict)
+        pprint(data_dict)
 
         return data_dict
 
@@ -132,3 +133,7 @@ def create_db(data_dict):
 
     init_opening_time(data_dict)
     print('***The opening_time table was created successfully***\n***Now you can use the get_data() function***')
+
+
+# create_db(bridges_dict)
+get_data()
