@@ -7,8 +7,8 @@ from pprint import pprint
 
 
 URL = 'https://mostotrest-spb.ru/'
-# GECKO_PATH = '/Users/abarnett/Documents/geckodriver'
-GECKO_PATH = 'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe'
+GECKO_PATH = '/Users/abarnett/Documents/geckodriver'
+# GECKO_PATH = 'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe'
 
 
 def fix_title(title):
@@ -110,7 +110,7 @@ def configure_the_browser():
     return driver
 
 
-def get_schedule(url):
+def get_schedule():
     # configuring the browser
 
     # driver = configure_the_browser()
@@ -121,7 +121,7 @@ def get_schedule(url):
 
     try:
         # going to the website
-        driver.get(url)
+        driver.get(URL)
         time.sleep(4)
 
         # going to the full schedule
@@ -159,5 +159,5 @@ def get_schedule(url):
     return bridge_dict
 
 
-data = get_schedule(URL)
-pprint(data)
+# data = get_schedule()
+# pprint(data)

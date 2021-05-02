@@ -135,5 +135,8 @@ def create_db(data_dict):
     print('***The opening_time table was created successfully***\n***Now you can use the get_data() function***')
 
 
-# create_db(bridges_dict)
+from parser import get_schedule
+result = get_schedule()
+pprint(result)
+create_db(result)
 get_data()

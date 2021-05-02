@@ -219,3 +219,32 @@ JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unr
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1619976882352	geckodriver	INFO	Listening on 127.0.0.1:56818
+1619976882367	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofilebstuT2"
+1619976882914	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619976884660	Marionette	INFO	Listening on port 56823
+1619976884744	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619976888307	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619976908062	Marionette	INFO	Stopped listening on port 56823
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619976937531	geckodriver	INFO	Listening on 127.0.0.1:56957
+1619976937545	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileUGwAcJ"
+1619976938061	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619976939843	Marionette	INFO	Listening on port 56962
+1619976939921	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1619976942845	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1619976960146	Marionette	INFO	Stopped listening on port 56962
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
