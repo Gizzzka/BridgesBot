@@ -8,8 +8,8 @@ from pprint import pprint
 
 
 URL = 'https://mostotrest-spb.ru/'
-GECKO_PATH = '/Users/abarnett/Documents/geckodriver'
-# GECKO_PATH = 'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe'
+# GECKO_PATH = '/Users/abarnett/Documents/geckodriver'
+GECKO_PATH = 'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe'
 
 
 def fix_title(title):
