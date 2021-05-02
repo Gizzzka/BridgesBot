@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 import random
 import json
 from typing import List, Any
@@ -37,7 +38,7 @@ def fix_title(title):
 
 
 def fix_time(raw):
-    return time.strptime(raw, '%H:%M')
+    return datetime.strptime(raw, '%H:%M').time()
 
 
 def fix_schedule(wrong_schedule):
@@ -62,7 +63,7 @@ def fix_schedule(wrong_schedule):
     else:
         result = {}
 
-    return result
+    return [result]
 
 
 def configure_the_browser():
