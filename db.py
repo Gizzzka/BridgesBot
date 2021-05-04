@@ -3,7 +3,7 @@ import datetime
 from datetime import date, time
 from dateutil import parser
 from pprint import pprint
-from bparser import get_schedule
+from parser import get_schedule
 
 
 def convert_time(str_time):
@@ -138,6 +138,8 @@ def get_data():
 
 
 def get_data_by_date(current_date):
+    current_date = date.isoformat(current_date)
+
     with sq.connect('Bridges_database.db', detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
@@ -168,5 +170,5 @@ def get_data_by_date(current_date):
         return data_dict
 
 
-get_data_by_date(date.isoformat(date.today()))
-
+create_db(get_schedule())
+get_data_by_date(date.today())
