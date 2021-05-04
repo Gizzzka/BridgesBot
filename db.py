@@ -170,5 +170,5 @@ def get_data_by_date(current_date):
         return data_dict
 
 
-create_db(get_schedule())
-get_data_by_date(date.today())
+# create_db(get_schedule())
+# get_data_by_date(date.today())
