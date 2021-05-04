@@ -1,9 +1,12 @@
 from telegram.ext import Updater, CommandHandler
 from envs import TOKEN
+from datetime import date
+from db import get_data_by_date
 
 
 def hello(update, context):
-    update.message.reply_text(f'Hello {update.effective_user.first_name}')
+    result = get_data_by_date(date.today())
+    update.message.reply_text(str(result))
 
 
 updater = Updater(TOKEN)

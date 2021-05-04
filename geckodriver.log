@@ -501,3 +501,125 @@ JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed t
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1620163729254	geckodriver	INFO	Listening on 127.0.0.1:42693
+1620163729291	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileZzXeWL"
+*** You are running in headless mode.
+1620163736096	Marionette	INFO	Marionette enabled
+
+(/usr/lib/firefox/firefox:23435): GLib-GObject-CRITICAL **: 00:29:01.112: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:23427): GLib-GObject-CRITICAL **: 00:29:01.112: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+
+(/usr/lib/firefox/firefox:23512): GLib-GObject-CRITICAL **: 00:29:03.477: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:23514): GLib-GObject-CRITICAL **: 00:29:03.478: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1620163745996	Marionette	INFO	Listening on port 33561
+1620163746277	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620163761955	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620163767095	Marionette	INFO	Stopped listening on port 33561
+1620163811092	geckodriver	INFO	Listening on 127.0.0.1:41913
+1620163811159	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOBcsdB"
+*** You are running in headless mode.
+1620163815367	Marionette	INFO	Marionette enabled
+
+(/usr/lib/firefox/firefox:23724): GLib-GObject-CRITICAL **: 00:30:16.482: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:23752): GLib-GObject-CRITICAL **: 00:30:17.293: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620163820994	Marionette	INFO	Listening on port 36095
+
+(/usr/lib/firefox/firefox:23815): GLib-GObject-CRITICAL **: 00:30:20.998: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1620163821019	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620163823436	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620163828824	Marionette	INFO	Stopped listening on port 36095
+1620163887072	geckodriver	INFO	Listening on 127.0.0.1:55865
+1620163887092	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofiler7j2We"
+*** You are running in headless mode.
+1620163888923	Marionette	INFO	Marionette enabled
+
+(/usr/lib/firefox/firefox:23986): GLib-GObject-CRITICAL **: 00:31:29.509: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:24011): GLib-GObject-CRITICAL **: 00:31:29.666: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620163893472	Marionette	INFO	Listening on port 32867
+
+(/usr/lib/firefox/firefox:24083): GLib-GObject-CRITICAL **: 00:31:33.482: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1620163893801	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620163897921	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620163902583	Marionette	INFO	Stopped listening on port 32867
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "Sqlite.jsm: wait until all connections are closed" is finished, it is too late to register completion condition "protections.sqlite#0: waiting for shutdown"
+1620164046881	geckodriver	INFO	Listening on 127.0.0.1:36511
+1620164046891	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileHQpc9S"
+*** You are running in headless mode.
+1620164047213	Marionette	INFO	Marionette enabled
+
+(/usr/lib/firefox/firefox:24296): GLib-GObject-CRITICAL **: 00:34:08.097: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+
+(/usr/lib/firefox/firefox:24321): GLib-GObject-CRITICAL **: 00:34:08.246: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620164051490	Marionette	INFO	Listening on port 33929
+
+(/usr/lib/firefox/firefox:24389): GLib-GObject-CRITICAL **: 00:34:11.530: g_object_set: assertion 'G_IS_OBJECT (object)' failed
+1620164051721	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620164054185	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL warning: <Create>: Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620164058843	Marionette	INFO	Stopped listening on port 33929
