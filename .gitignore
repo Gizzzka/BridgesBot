@@ -1,3 +1,6 @@
 .idea
 # envs.py
 env/
+*.db
+*.json
+*.log
