@@ -2,6 +2,7 @@ import sqlite3 as sq
 from datetime import date, time
 from dateutil import parser
 from pprint import pprint
+import parser
 
 
 def convert_time(str_time):
@@ -136,8 +137,8 @@ def create_db(data_dict):
     print('***The opening_time table was created successfully***\n***Now you can use the get_data() function***')
 
 
-from parser import get_schedule
-result = get_schedule()
+# from parser import get_schedule
+# result = parser.get_schedule()
 pprint(result)
 create_db(result)
 get_data()

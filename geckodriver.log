@@ -343,3 +343,78 @@ JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unr
 JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
 1619977616590	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
 1619977638417	Marionette	INFO	Stopped listening on port 58012
+1620152524954	geckodriver	INFO	Listening on 127.0.0.1:59593
+1620152525947	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofile2YiPmT"
+*** You are running in headless mode.
+1620152526764	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620152528452	Marionette	INFO	Listening on port 59606
+1620152528561	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620152530118	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620152531180	Marionette	INFO	Stopped listening on port 59606
+console.warn: services.settings: main/whats-new-panel sync interrupted by shutdown
+1620152602670	geckodriver	INFO	Listening on 127.0.0.1:59676
+1620152602687	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofiletEGdEo"
+1620152603184	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620152604829	Marionette	INFO	Listening on port 59685
+1620152604869	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620152606979	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1620152607674	Marionette	INFO	Stopped listening on port 59685
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1620152612939	geckodriver	INFO	Listening on 127.0.0.1:59753
+1620152612958	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofilejN5Yq1"
+1620152613489	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620152615197	Marionette	INFO	Listening on port 59762
+1620152615230	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620152616885	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1620152617916	Marionette	INFO	Stopped listening on port 59762
+[Parent 6748, IPC I/O Parent] WARNING: pipe error: Socket is not connected: file /builds/worker/checkouts/gecko/ipc/chromium/src/chrome/common/ipc_channel_posix.cc:723
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1620152626146	geckodriver	INFO	Listening on 127.0.0.1:59830
+1620152626165	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofile1uOqfo"
+1620152626614	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620152628152	Marionette	INFO	Listening on port 59835
+1620152628245	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620152629701	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1620152639943	Marionette	INFO	Stopped listening on port 59835
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1620152674856	geckodriver	INFO	Listening on 127.0.0.1:59911
+1620152674872	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofile7RxT4v"
+*** You are running in headless mode.
+1620152675318	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620152676529	Marionette	INFO	Listening on port 59916
+1620152676636	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620152678197	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620152683626	Marionette	INFO	Stopped listening on port 59916
