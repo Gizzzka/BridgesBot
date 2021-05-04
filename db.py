@@ -1,8 +1,9 @@
 import sqlite3 as sq
+import datetime
 from datetime import date, time
 from dateutil import parser
 from pprint import pprint
-import parser
+from bparser import get_schedule
 
 
 def convert_time(str_time):
@@ -81,7 +82,6 @@ def init_opening_time(bridges_dictt):
             date_id = date_id[0][0]
 
             for embedded_dict in bridges_dictt[bridge]:
-                print(embedded_dict)
 
                 for opened_at, closed_at in embedded_dict.items():
                     cur.execute("""INSERT INTO opening_time(id, closed_at, opened_at, bridge_id, date_id)
@@ -95,6 +95,20 @@ def init_opening_time(bridges_dictt):
 #                 'Володарский мост': [{time(2, 20): time(3, 20)}],
 #                 'Большеохтинский мост': [{time(2): time(5)}]
 #                 }
+
+
+def create_db(data_dict):
+    init_db()
+    print('***The database was created successfully***')
+
+    init_titles({'МАН': 'Мост Александра Невского', 'БЖМ': 'Биржевой мост', 'БВМ': 'Благовещенский мост',
+                 'БОМ': 'Большеохтинский мост', 'ВДМ': 'Володарский мост', 'ДЦМ': 'Дворцовый мост',
+                 'ЛТМ': 'Литейный мост', 'ТРМ': 'Троицкий мост', 'ТУ': 'Тучков мост'})
+    init_date()
+    print('***The date table and the titles table were created successfully***')
+
+    init_opening_time(data_dict)
+    print('***The opening_time table was created successfully***\n***Now you can use the get_data() function***')
 
 
 def get_data():
@@ -123,22 +137,36 @@ def get_data():
         return data_dict
 
 
-def create_db(data_dict):
-    init_db()
-    print('***The database was created successfully***')
+def get_data_by_date(current_date):
+    with sq.connect('Bridges_database.db', detect_types=sq.PARSE_DECLTYPES) as con:
+        cur = con.cursor()
 
-    init_titles({'МАН': 'Мост Александра Невского', 'БЖМ': 'Биржевой мост', 'БВМ': 'Благовещенский мост',
-                 'БОМ': 'Большеохтинский мост', 'ВДМ': 'Володарский мост', 'ДЦМ': 'Дворцовый мост',
-                 'ЛТМ': 'Литейный мост', 'ТРМ': 'Троицкий мост', 'ТУ': 'Тучков мост'})
-    init_date()
-    print('***The date table and the titles table were created successfully***')
+        cur.execute("""SELECT id FROM date
+                       WHERE date == ?
+                    """, [current_date])
+        date_id = [cur.fetchall()[0][0]]
 
-    init_opening_time(data_dict)
-    print('***The opening_time table was created successfully***\n***Now you can use the get_data() function***')
+        cur.execute("""SELECT date.date, bridges_titles.full_title, opened_at, closed_at from opening_time
+                       JOIN bridges_titles
+                       ON bridges_titles.id == bridge_id
+                       JOIN date
+                       ON date_id == ?
+                    """, date_id)
+        result = cur.fetchall()
+
+        data_dict = {}
+        for elem in result:
+
+            if elem[1] not in data_dict.keys():
+                data_dict[elem[1]] = [{convert_time(elem[2]): convert_time(elem[3])}]
+            elif elem[1] in data_dict.keys():
+                data_dict[elem[1]][0][convert_time(elem[2])] = convert_time(elem[3])
+
+        print('***Data were successfully retrieved***')
+        pprint(data_dict)
+
+        return data_dict
 
 
-# from parser import get_schedule
-# result = parser.get_schedule()
-pprint(result)
-create_db(result)
-get_data()
+get_data_by_date(date.isoformat(date.today()))
+
