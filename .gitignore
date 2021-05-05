@@ -2,6 +2,8 @@
 env/
 .db
 .json
-.log
+geckodriver.log
 geckodriver
 .DS_Store
+__pycache__/
+.pyc
