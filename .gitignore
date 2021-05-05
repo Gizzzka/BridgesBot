@@ -1,6 +1,7 @@
 .idea
 env/
-*.db
-*.json
-*.log
+.db
+.json
+.log
 geckodriver
+.DS_Store
