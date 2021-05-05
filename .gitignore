@@ -7,3 +7,4 @@ geckodriver
 .DS_Store
 __pycache__/
 .pyc
+Bridges_database.db
