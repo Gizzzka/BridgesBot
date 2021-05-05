@@ -72,5 +72,5 @@ def get_schedule():
     return bridge_dict
 
 
-data = get_schedule()
-print(data)
+# data = get_schedule()
+# print(data)

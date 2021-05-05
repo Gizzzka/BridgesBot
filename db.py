@@ -1,9 +1,8 @@
-import sqlite3 as sq
-import datetime
 from datetime import date, time
+from parser import get_schedule
 from dateutil import parser
 from pprint import pprint
-from parser import get_schedule
+import sqlite3 as sq
 
 
 def convert_time(str_time):
