@@ -44,36 +44,31 @@ def init_titles(titles):
     with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
-        i = 1
         for short_title, full_title in titles.items():
-            cur.execute("""INSERT INTO bridges_titles(id, short_title, full_title) VALUES (?, ?, ?)""",
-                        (i, short_title, full_title))
-            i += 1
+            cur.execute("""INSERT INTO bridges_titles(short_title, full_title) VALUES (?, ?)""",
+                        (short_title, full_title))
 
 
-def init_date():
+def init_date(dell=False):
     with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
-        cur.execute("""DELETE FROM date""")
+        if dell:
+            cur.execute("""DELETE FROM date""")
 
-        date_id = 1
-        today_date = date.isoformat(date.today())
-
-        cur.execute("""INSERT INTO date(id, date) VALUES(?, ?)""", (date_id, today_date))
+        today_date = [date.isoformat(date.today())]
+        cur.execute("""INSERT INTO date (date) VALUES(?)""", today_date)
 
 
-def init_opening_time(bridges_dictt):
+def init_opening_time(bridges_dictt, dell=False):
     with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
-        cur.execute("""DELETE FROM opening_time""")
+        if dell:  # delete old opening time
+            cur.execute("""DELETE FROM opening_time""")
 
-        elem_id = 1
         for bridge in bridges_dictt:
-
-            lst = [bridge]
-            cur.execute("""SELECT id FROM bridges_titles WHERE ? == full_title""", lst)
+            cur.execute("""SELECT id FROM bridges_titles WHERE ? == full_title""", [bridge])
             bridge_id = cur.fetchall()
             bridge_id = bridge_id[0][0]
 
@@ -82,78 +77,48 @@ def init_opening_time(bridges_dictt):
             date_id = date_id[0][0]
 
             for embedded_dict in bridges_dictt[bridge]:
-
                 for opened_at, closed_at in embedded_dict.items():
-                    cur.execute("""INSERT INTO opening_time(id, closed_at, opened_at, bridge_id, date_id)
-                                   VALUES (?, ?, ?, ?, ?)""",
-                                [elem_id, time.isoformat(closed_at), time.isoformat(opened_at), bridge_id, date_id]
+                    cur.execute("""INSERT INTO opening_time(closed_at, opened_at, bridge_id, date_id)
+                                   VALUES (?, ?, ?, ?)""",
+                                [time.isoformat(closed_at), time.isoformat(opened_at), bridge_id, date_id]
                                 )
-                    elem_id += 1
 
 
-# bridges_dict = {'Мост Александра Невского': [{time(2, 20): time(4, 20), time(4, 40): time(5, 20)}],
-#                 'Володарский мост': [{time(2, 20): time(3, 20)}],
-#                 'Большеохтинский мост': [{time(2): time(5)}]
-#                 }
-
-
-def create_db(data_dict):
+def create_db():
     init_db()
     print('***The database was created successfully***')
 
     init_titles({'МАН': 'Мост Александра Невского', 'БЖМ': 'Биржевой мост', 'БВМ': 'Благовещенский мост',
                  'БОМ': 'Большеохтинский мост', 'ВДМ': 'Володарский мост', 'ДЦМ': 'Дворцовый мост',
                  'ЛТМ': 'Литейный мост', 'ТРМ': 'Троицкий мост', 'ТУ': 'Тучков мост'})
-    init_date()
-    print('***The date table and the titles table were created successfully***')
-
-    init_opening_time(data_dict)
-    print('***The opening_time table was created successfully***\n***Now you can use the get_data() function***')
+    print('***The titles were added successfully***\n***The database was created successfully***')
 
 
-def get_data():
-    with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
-        cur = con.cursor()
+def fill_data(data_dict, dell=False):  # if dell == True, all previous data in the db will be deleted
+    init_date(dell)
+    print("***Today's date was added***")
 
-        cur.execute("""SELECT date.date, bridges_titles.full_title, opened_at, closed_at from opening_time
-                       JOIN bridges_titles
-                       ON bridges_titles.id == bridge_id
-                       JOIN date
-                       ON date.id = date_id
-                    """)
-        result = cur.fetchall()
-
-        data_dict = {}
-        for elem in result:
-
-            if elem[1] not in data_dict.keys():
-                data_dict[elem[1]] = [{convert_time(elem[2]): convert_time(elem[3])}]
-            elif elem[1] in data_dict.keys():
-                data_dict[elem[1]][0][convert_time(elem[2])] = convert_time(elem[3])
-
-        print('***Data were successfully retrieved***')
-        pprint(data_dict)
-
-        return data_dict
+    init_opening_time(data_dict, dell)
+    print('***The opening time periods were added***\n***Now you can use the get_data_by_date() function***')
 
 
-def get_data_by_date(current_date):
+def get_data_by_date(current_date=date.today()):
     current_date = date.isoformat(current_date)
 
     with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
         cur.execute("""SELECT id FROM date
-                       WHERE date == ?
-                    """, [current_date])
+                               WHERE date == ?
+                            """, [current_date])
         date_id = [cur.fetchall()[0][0]]
 
         cur.execute("""SELECT date.date, bridges_titles.full_title, opened_at, closed_at from opening_time
-                       JOIN bridges_titles
-                       ON bridges_titles.id == bridge_id
-                       JOIN date
-                       ON date_id == ?
-                    """, date_id)
+                               JOIN bridges_titles
+                               ON bridges_titles.id == bridge_id
+                               JOIN date
+                               ON date_id == ?
+                            """, date_id)
         result = cur.fetchall()
 
         data_dict = {}
@@ -169,6 +134,3 @@ def get_data_by_date(current_date):
 
         return data_dict
 
-
-# create_db(get_schedule())
-# get_data_by_date(date.today())
