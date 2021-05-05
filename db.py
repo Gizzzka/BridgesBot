@@ -3,6 +3,7 @@ from parser import get_schedule
 from dateutil import parser
 from pprint import pprint
 import sqlite3 as sq
+import envs
 
 
 def convert_time(str_time):
@@ -12,7 +13,7 @@ def convert_time(str_time):
 
 
 def init_db():
-    with sq.connect('Bridges_database.db', detect_types=sq.PARSE_DECLTYPES) as con:
+    with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
         cur.execute("""DROP TABLE IF EXISTS bridges_titles""")
@@ -40,7 +41,7 @@ def init_db():
 
 
 def init_titles(titles):
-    with sq.connect('Bridges_database.db', detect_types=sq.PARSE_DECLTYPES) as con:
+    with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
         i = 1
@@ -51,7 +52,7 @@ def init_titles(titles):
 
 
 def init_date():
-    with sq.connect('Bridges_database.db', detect_types=sq.PARSE_DECLTYPES) as con:
+    with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
         cur.execute("""DELETE FROM date""")
@@ -63,7 +64,7 @@ def init_date():
 
 
 def init_opening_time(bridges_dictt):
-    with sq.connect('Bridges_database.db', detect_types=sq.PARSE_DECLTYPES) as con:
+    with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
         cur.execute("""DELETE FROM opening_time""")
@@ -111,7 +112,7 @@ def create_db(data_dict):
 
 
 def get_data():
-    with sq.connect('Bridges_database.db', detect_types=sq.PARSE_DECLTYPES) as con:
+    with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
         cur.execute("""SELECT date.date, bridges_titles.full_title, opened_at, closed_at from opening_time
@@ -139,7 +140,7 @@ def get_data():
 def get_data_by_date(current_date):
     current_date = date.isoformat(current_date)
 
-    with sq.connect('Bridges_database.db', detect_types=sq.PARSE_DECLTYPES) as con:
+    with sq.connect(envs.DB_PATH, detect_types=sq.PARSE_DECLTYPES) as con:
         cur = con.cursor()
 
         cur.execute("""SELECT id FROM date
