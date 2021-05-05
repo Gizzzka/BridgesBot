@@ -623,3 +623,37 @@ JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: WebGL wa
 JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
 * Can't use WebGL in headless mode (https://bugzil.la/1375585).
 1620164058843	Marionette	INFO	Stopped listening on port 33929
+1620200885100	geckodriver	INFO	Listening on 127.0.0.1:65301
+1620200886137	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofiledDOO9x"
+*** You are running in headless mode.
+1620200887155	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620200889183	Marionette	INFO	Listening on port 65309
+1620200889354	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620200891104	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620200892112	Marionette	INFO	Stopped listening on port 65309
+1620200931305	geckodriver	INFO	Listening on 127.0.0.1:65388
+1620200931319	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--headless" "-foreground" "-no-remote" "-profile" "/var/folders/s4/gvnycpr963s9lwh6s544qk940000gn/T/rust_mozprofileGnXsNT"
+*** You are running in headless mode.
+1620200931727	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620200933013	Marionette	INFO	Listening on port 65393
+1620200933071	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+JavaScript warning: https://mostotrest-spb.ru/js/jquery-ready.js, line 1638: unreachable code after return statement
+1620200934592	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://mc.yandex.ru/metrika/watch.js, line 105: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+JavaScript warning: https://api-maps.yandex.ru/2.1/?lang=ru_RU, line 1: Failed to create WebGL context: WebGL creation failed: 
+* Can't use WebGL in headless mode (https://bugzil.la/1375585).
+1620200943409	Marionette	INFO	Stopped listening on port 65393
