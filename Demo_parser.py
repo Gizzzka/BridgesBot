@@ -52,7 +52,11 @@ class BridgesDict:
 
     @staticmethod
     def fix_time(raw):
-        return datetime.strptime(raw, '%H:%M').time()
+        try:
+            return datetime.strptime(raw, '%H:%M').time()
+        except Exception as ex:
+            print(ex)
+            return datetime.strptime(raw, '%H:%M:%S').time()
 
     @staticmethod
     def fix_schedule(wrong_schedule):
@@ -238,5 +242,5 @@ class Database:
 
 test = Database()
 test.create_db()
-# test.fill_data()
-# test.get_data_by_date()
+test.fill_data()
+test.get_data_by_date()
