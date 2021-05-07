@@ -116,10 +116,6 @@ class BridgesDict:
         return bridge_dict
 
 
-# test = BridgesDict()
-# test.get_schedule()
-
-
 class Database:
     def __init__(self):
         self.db_name = 'Bridges_database.db'
