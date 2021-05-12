@@ -2,7 +2,8 @@ import sqlite3 as sq
 import static
 from pprint import pprint
 from datetime import date, time
-from Demo_parser import BridgesDict
+from Demo_parser import Parser
+from timeit import timeit
 
 
 class Database:
@@ -54,13 +55,14 @@ class Openings(Database):
         super().__init__()
 
     def init_opening_time(self):
-        bridges_obj = BridgesDict()
-        self.schedule = bridges_obj.get_schedule()
+        bridges_obj = Parser()
+        bridges_obj.get_schedule()
+        schedule = bridges_obj.bridge_dict
 
         with sq.connect(self.db_name, detect_types=self.arg) as con:
             cur = con.cursor()
 
-            for bridge in self.schedule:
+            for bridge in schedule:
                 cur.execute(static.SELECT_TITLES_ID, [bridge])
                 bridge_id = cur.fetchall()
                 bridge_id = bridge_id[0][0]
@@ -69,7 +71,7 @@ class Openings(Database):
                 date_id = cur.fetchall()
                 date_id = date_id[0][0]
 
-                for embedded_dict in self.schedule[bridge]:
+                for embedded_dict in schedule[bridge]:
                     for opened_at, closed_at in embedded_dict.items():
                         cur.execute(static.INSERT_OPENINGS,
                                     [time.isoformat(closed_at), time.isoformat(opened_at), bridge_id, date_id])
@@ -103,12 +105,12 @@ class Operator(Titles, Date, Openings):
             for elem in result:
 
                 if elem[1] not in data_dict.keys():
-                    data_dict[elem[1]] = [{BridgesDict.fix_time(elem[2]): BridgesDict.fix_time(elem[3])}]
+                    data_dict[elem[1]] = [{Parser.fix_time(elem[2]): Parser.fix_time(elem[3])}]
                 elif elem[1] in data_dict.keys():
-                    data_dict[elem[1]][0][BridgesDict.fix_time(elem[2])] = BridgesDict.fix_time(elem[3])
+                    data_dict[elem[1]][0][Parser.fix_time(elem[2])] = Parser.fix_time(elem[3])
 
             print('***Data were successfully retrieved***')
-            pprint(data_dict)
+            # pprint(data_dict)
 
             return data_dict
 
@@ -129,12 +131,12 @@ class Operator(Titles, Date, Openings):
             for elem in result:
 
                 if elem[1] not in data_dict.keys():
-                    data_dict[elem[1]] = [{BridgesDict.fix_time(elem[2]): BridgesDict.fix_time(elem[3])}]
+                    data_dict[elem[1]] = [{Parser.fix_time(elem[2]): Parser.fix_time(elem[3])}]
                 elif elem[1] in data_dict.keys():
-                    data_dict[elem[1]][0][BridgesDict.fix_time(elem[2])] = BridgesDict.fix_time(elem[3])
+                    data_dict[elem[1]][0][Parser.fix_time(elem[2])] = Parser.fix_time(elem[3])
 
             print('***Data were successfully retrieved***')
-            pprint(data_dict)
+            # pprint(data_dict)
 
             return data_dict
 
@@ -148,4 +150,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    print(timeit(main, number=1))
