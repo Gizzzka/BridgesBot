@@ -6,7 +6,8 @@ SEL_DETAILS = '/html/body/div[1]/div/div[1]/div[3]'
 #
 #
 # FF_GECKO_PATH = '/Users/abarnett/Documents/geckodriver'
-FF_GECKO_PATH = 'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe'
+# FF_GECKO_PATH = 'C:/Users/iljus/Desktop/Actual code/Trying selenium/geckodriver.exe'
+FF_GECKO_PATH = '/srv/BridgesBot'
 FF_PREF_FLASH = 'dom.ipc.plugins.enabled.libflashplayer.so'
 FF_PREF_IMG = 'permissions.default.image'
 #

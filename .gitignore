@@ -142,3 +142,5 @@ cython_debug/
 *.json
 .DS_Store
 *.idea
+
+geckodriver
