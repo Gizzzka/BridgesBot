@@ -1,8 +1,8 @@
 import sqlite3 as sq
 import static
+from Demo_parser import Parser
 from pprint import pprint
 from datetime import date, time
-from Demo_parser import Parser
 from timeit import timeit
 
 
@@ -71,10 +71,10 @@ class Openings(Database):
                 date_id = cur.fetchall()
                 date_id = date_id[0][0]
 
-                for embedded_dict in schedule[bridge]:
-                    for opened_at, closed_at in embedded_dict.items():
-                        cur.execute(static.INSERT_OPENINGS,
-                                    [time.isoformat(closed_at), time.isoformat(opened_at), bridge_id, date_id])
+                for opened_at in schedule[bridge]:
+                    cur.execute(static.INSERT_OPENINGS,
+                                [time.isoformat(schedule[bridge][opened_at]), time.isoformat(opened_at),
+                                 bridge_id, date_id])
 
 
 class Operator(Titles, Date, Openings):
@@ -103,14 +103,10 @@ class Operator(Titles, Date, Openings):
 
             data_dict = {}
             for elem in result:
-
-                if elem[1] not in data_dict.keys():
-                    data_dict[elem[1]] = [{Parser.fix_time(elem[2]): Parser.fix_time(elem[3])}]
-                elif elem[1] in data_dict.keys():
-                    data_dict[elem[1]][0][Parser.fix_time(elem[2])] = Parser.fix_time(elem[3])
-
-            print('***Data were successfully retrieved***')
-            # pprint(data_dict)
+                if elem[0] not in data_dict.keys():
+                    data_dict[elem[0]] = {elem[1]: elem[2]}
+                else:
+                    data_dict[elem[0]].update({elem[1]: elem[2]})
 
             return data_dict
 
@@ -118,35 +114,30 @@ class Operator(Titles, Date, Openings):
         with sq.connect(self.db_name, detect_types=self.arg) as con:
             cur = con.cursor()
 
-            cur.execute(static.SELECT_DATE_ID, [self.date])
-            date_id = cur.fetchall()[0][0]
+            current_date = date.isoformat(date.today())
 
             cur.execute(static.SELECT_TITLES_ID, [title])
             title_id = cur.fetchall()[0][0]
 
-            cur.execute(static.GET_BY_TITLE, [title_id, title_id, title_id, date_id])
+            cur.execute(static.SELECT_DATE_ID, [current_date])
+            date_id = cur.fetchall()[0][0]
+
+            cur.execute(static.GET_BY_TITLE, [title_id, date_id])
             result = cur.fetchall()
 
-            data_dict = {}
+            data_dict = {title: {}}
             for elem in result:
-
-                if elem[1] not in data_dict.keys():
-                    data_dict[elem[1]] = [{Parser.fix_time(elem[2]): Parser.fix_time(elem[3])}]
-                elif elem[1] in data_dict.keys():
-                    data_dict[elem[1]][0][Parser.fix_time(elem[2])] = Parser.fix_time(elem[3])
-
-            print('***Data were successfully retrieved***')
-            # pprint(data_dict)
+                data_dict[title].update({elem[0]: elem[1]})
 
             return data_dict
 
 
 def main():
     test = Operator()
-    test.create_db()
-    test.fill_data()
-    test.get_data_by_date()
-    test.get_data_by_title('Мост Александра Невского')
+    # test.create_db()
+    # test.fill_data()
+    pprint(test.get_data_by_date())
+    print(test.get_data_by_title('Дворцовый мост'))
 
 
 if __name__ == '__main__':

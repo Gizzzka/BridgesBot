@@ -80,7 +80,7 @@ class Parser:
         else:
             result = {}
 
-        return [result]
+        return result
 
     def get_schedule(self):
         try:

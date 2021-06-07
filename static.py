@@ -35,16 +35,24 @@ CREATE_OPENINGS = """CREATE TABLE IF NOT EXISTS opening_time (
 DROP_OPENINGS = """DROP TABLE IF EXISTS opening_time"""
 #
 #
-GET_BY_DATE = """SELECT date.date, bridges_titles.full_title, opened_at, closed_at from opening_time
+GET_BY_DATE = """SELECT bridges_titles.full_title, opened_at, closed_at FROM opening_time
                                    JOIN bridges_titles
                                    ON bridges_titles.id == bridge_id
                                    JOIN date
                                    ON date_id == ?
                                 """
-GET_BY_TITLE = """SELECT date.date, bridges_titles.full_title, 
-                                (SELECT opened_at FROM opening_time WHERE bridge_id = ?), 
-                                (SELECT closed_at FROM opening_time WHERE bridge_id = ?) 
+GET_BY_DATE_ALT = """SELECT date.date, bridges_titles.full_title, opened_at, closed_at FROM opening_time
+                                   JOIN bridges_titles
+                                   ON bridges_titles.id == bridge_id
+                                   JOIN date
+                                   ON date_id == ?
+                                """
+
+GET_BY_TITLE = """SELECT opened_at, closed_at FROM opening_time WHERE bridge_id == ? AND date_id == ?"""
+
+GET_BY_TITLE_ALT = """SELECT date.date, bridges_titles.full_title, 
+                                (SELECT opened_at FROM opening_time WHERE bridge_id == ?), 
+                                (SELECT closed_at FROM opening_time WHERE bridge_id == ?) 
                            FROM opening_time 
-                           JOIN bridges_titles 
-                           ON bridges_titles.id == ? 
+                           JOIN bridges_titles ON bridges_titles.id == ? 
                            JOIN date ON date_id == ?"""
