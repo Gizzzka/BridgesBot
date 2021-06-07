@@ -67,11 +67,13 @@ def create_from_scratch(update, context):
     operator = Operator()
     operator.create_db()
     operator.fill_data()
+    context.bot.send_message(chat_id=update.effective_chat.id, text='Новая база данных была создана')
 
 
 def update_info(update, context):
     operator = Operator()
     operator.fill_data()
+    context.bot.send_message(chat_id=update.effective_chat.id, text='Данные в базе данных были обновлены')
 
 
 bridge_handler = MessageHandler(Filters.text, bridge)
