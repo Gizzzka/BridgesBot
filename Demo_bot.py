@@ -63,7 +63,24 @@ def bridge(update, context):
         context.bot.send_message(chat_id=update.effective_chat.id, text='Сегодня этот мост не разводится!')
 
 
+def create_from_scratch(update, context):
+    operator = Operator()
+    operator.create_db()
+    operator.fill_data()
+
+
+def update_info(update, context):
+    operator = Operator()
+    operator.fill_data()
+
+
 bridge_handler = MessageHandler(Filters.text, bridge)
 dispatcher.add_handler(bridge_handler)
+
+scratch_handler = CommandHandler('create_from_scratch', create_from_scratch)
+dispatcher.add_handler(scratch_handler)
+
+update_handler = CommandHandler('update_info', update_info)
+dispatcher.add_handler(update_handler)
 
 updater.start_polling()
