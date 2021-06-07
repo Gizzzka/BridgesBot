@@ -1,5 +1,5 @@
 import sqlite3 as sq
-import Static
+import static
 from Parser import Parser
 from pprint import pprint
 from datetime import date, time

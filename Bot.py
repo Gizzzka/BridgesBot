@@ -1,4 +1,4 @@
-from Db import Operator
+from db import Operator
 from telegram.ext import Updater
 from telegram.ext import MessageHandler, CommandHandler, Filters
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
