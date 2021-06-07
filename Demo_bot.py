@@ -76,13 +76,13 @@ def update_info(update, context):
     context.bot.send_message(chat_id=update.effective_chat.id, text='Данные в базе данных были обновлены')
 
 
-bridge_handler = MessageHandler(Filters.text, bridge)
-dispatcher.add_handler(bridge_handler)
-
 scratch_handler = CommandHandler('create_from_scratch', create_from_scratch)
 dispatcher.add_handler(scratch_handler)
 
 update_handler = CommandHandler('update_info', update_info)
 dispatcher.add_handler(update_handler)
+
+bridge_handler = MessageHandler(Filters.text, bridge)
+dispatcher.add_handler(bridge_handler)
 
 updater.start_polling()
