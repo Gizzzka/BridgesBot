@@ -1,6 +1,6 @@
 import sqlite3 as sq
 import envs_static as static
-from parser import Parser
+from b_parser import Parser
 from pprint import pprint
 from datetime import date, time
 from timeit import timeit

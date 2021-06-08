@@ -4,6 +4,7 @@ from telegram.ext import MessageHandler, CommandHandler, Filters
 from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
 import logging
 import pprint
+import emoji
 
 token = '1760883122:AAHNfTbFc2VGq130wolzSnoilAMNVkcpP6U'
 updater = Updater(token=token)
@@ -28,6 +29,22 @@ def start(update, context):
 
 start_handler = CommandHandler('start', start)
 dispatcher.add_handler(start_handler)
+
+
+def replace_num(string):
+    letters_lst = {'0': emoji.emojize(':keycap_0:'), '1': emoji.emojize(':keycap_1:'),
+                   '2': emoji.emojize(':keycap_2:'), '3': emoji.emojize(':keycap_3:'),
+                   '4': emoji.emojize(':keycap_4:'), '5': emoji.emojize(':keycap_5:'),
+                   '6': emoji.emojize(':keycap_6:'), '7': emoji.emojize(':keycap_7:'),
+                   '8': emoji.emojize(':keycap_8:'), '9': emoji.emojize(':keycap_9:')}
+
+    new_string = string
+
+    for letter in string:
+        if letter in list(letters_lst.keys()):
+            new_string = new_string.replace(letter, letters_lst[letter])
+
+    return new_string
 
 
 def fix_info(info):
@@ -56,6 +73,7 @@ def bridge(update, context):
         operator = Operator()
         result = operator.get_data_by_title(bridge_title)
         result = fix_info(result)
+        result = replace_num(result)
         context.bot.send_message(chat_id=update.effective_chat.id, text=result)
 
     except Exception as ex:
