@@ -16,14 +16,14 @@ class Parser:
         fo.add_argument('--headless')  # enable silent mode
 
         fp = webdriver.FirefoxProfile()  # disable images load
-        fp.set_preference(envs_demo.FF_PREF_IMG, 2)
-        fp.set_preference(envs_demo.FF_PREF_FLASH, 'false')
+        fp.set_preference(envs.FF_PREF_IMG, 2)
+        fp.set_preference(envs.FF_PREF_FLASH, 'false')
         fp.update_preferences()
 
-        self.driver = webdriver.Firefox(executable_path=envs_demo.FF_GECKO_PATH,
+        self.driver = webdriver.Firefox(executable_path=envs.FF_GECKO_PATH,
                                         firefox_profile=fp,
                                         options=fo)
-        self.url = envs_demo.URL
+        self.url = envs.URL
 
     @staticmethod
     def fix_title(title):
@@ -53,9 +53,9 @@ class Parser:
     @staticmethod
     def fix_time(raw):
         try:
-            return datetime.strptime(raw, envs_demo.TIME_TEMPLATE).time()
+            return datetime.strptime(raw, envs.TIME_TEMPLATE).time()
         except Exception as ex:
-            return datetime.strptime(raw, envs_demo.ALT_TIME_TEMPLATE).time()
+            return datetime.strptime(raw, envs.ALT_TIME_TEMPLATE).time()
 
     @staticmethod
     def fix_schedule(wrong_schedule):
@@ -85,7 +85,7 @@ class Parser:
     def get_schedule(self):
         try:
             self.driver.get(self.url)
-            WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, envs_demo.SEL_DETAILS))).click()
+            WebDriverWait(self.driver, 5).until(EC.element_to_be_clickable((By.XPATH, envs.SEL_DETAILS))).click()
             # finding tag <div> with all bridges tags
             bridges_divs = self.driver.find_elements_by_class_name('bridge')
             # iterating throw each bridge tag and filling the dict
