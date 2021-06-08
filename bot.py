@@ -32,17 +32,18 @@ dispatcher.add_handler(start_handler)
 
 
 def replace_num(string):
-    letters_lst = {'0': emoji.emojize(':keycap_0:'), '1': emoji.emojize(':keycap_1:'),
-                   '2': emoji.emojize(':keycap_2:'), '3': emoji.emojize(':keycap_3:'),
-                   '4': emoji.emojize(':keycap_4:'), '5': emoji.emojize(':keycap_5:'),
-                   '6': emoji.emojize(':keycap_6:'), '7': emoji.emojize(':keycap_7:'),
-                   '8': emoji.emojize(':keycap_8:'), '9': emoji.emojize(':keycap_9:')}
+    letters_dict = {'0': emoji.emojize(':keycap_0:'), '1': emoji.emojize(':keycap_1:'),
+                    '2': emoji.emojize(':keycap_2:'), '3': emoji.emojize(':keycap_3:'),
+                    '4': emoji.emojize(':keycap_4:'), '5': emoji.emojize(':keycap_5:'),
+                    '6': emoji.emojize(':keycap_6:'), '7': emoji.emojize(':keycap_7:'),
+                    '8': emoji.emojize(':keycap_8:'), '9': emoji.emojize(':keycap_9:')}
 
-    new_string = string
-
-    for letter in string:
-        if letter in list(letters_lst.keys()):
-            new_string = new_string.replace(letter, letters_lst[letter])
+    new_string = ''
+    for elem in string:
+        if elem not in list(letters_dict.keys()):
+            new_string += elem
+        elif elem in list(letters_dict.keys()):
+            new_string += letters_dict[elem]
 
     return new_string
 
