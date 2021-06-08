@@ -63,12 +63,11 @@ def fix_info(info):
     if len(time_dict) == 0:
         return f'{title} сегодня не разводится'
 
-    final = f'{title}:\n'
+    final = f"{title}:\n\n"
     for opening_time in time_dict:
-        final += f'разведен с {str(opening_time)[:-3]} по {str(time_dict[opening_time])[:-3]}'
-        final += '\nтакже, '
+        final += f"Разведен:\n{'#'*24}\nс: {str(opening_time)[:-3]} по {str(time_dict[opening_time])[:-3]}\n\n"
 
-    return final[:-8]
+    return final
 
 
 def bridge(update, context):
